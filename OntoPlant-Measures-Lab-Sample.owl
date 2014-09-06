@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ssn "http://purl.oclc.org/NET/ssnx/ssn#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY ontoplant-measures "http://www.utvalamb.enea.bologna.it/ontoplant-measures#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.utvalamb.enea.bologna.it/ontolplant-measures-example#"
+     xml:base="http://www.utvalamb.enea.bologna.it/ontolplant-measures-example"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:ssn="http://purl.oclc.org/NET/ssnx/ssn#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:ontoplant-measures="http://www.utvalamb.enea.bologna.it/ontoplant-measures#">
+    <owl:Ontology rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample">
+        <owl:imports rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#orpMeasurementService -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#orpMeasurementService">
+        <rdf:type rdf:resource="&ontoplant-measures;MeasurementService"/>
+        <ontoplant-measures:measuresFeature rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWater"/>
+        <ontoplant-measures:collectionPoint rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterCollectionPoint"/>
+        <ontoplant-measures:measuresProperty rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterORP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#orpObservation -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#orpObservation">
+        <rdf:type rdf:resource="&ssn;Observation"/>
+        <ssn:observationResult rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#orpSensorOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#orpObservationValue -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#orpObservationValue">
+        <rdf:type rdf:resource="&ssn;ObservationValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#orpSensorOutput -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#orpSensorOutput">
+        <rdf:type rdf:resource="&ssn;SensorOutput"/>
+        <ontoplant-measures:refersToService rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#orpMeasurementService"/>
+        <ssn:hasValue rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#orpObservationValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#phMeasurementService -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#phMeasurementService">
+        <rdf:type rdf:resource="&ontoplant-measures;MeasurementService"/>
+        <ontoplant-measures:collectionPoint rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterCollectionPoint"/>
+        <ontoplant-measures:measuresProperty rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterPH"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#phObservation -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#phObservation">
+        <rdf:type rdf:resource="&ssn;Observation"/>
+        <ssn:observationResult rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#phSensorOutput"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#phObservationValue -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#phObservationValue">
+        <rdf:type rdf:resource="&ssn;ObservationValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#phSensorOutput -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#phSensorOutput">
+        <rdf:type rdf:resource="&ssn;SensorOutput"/>
+        <ontoplant-measures:refersToService rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#phMeasurementService"/>
+        <ssn:hasValue rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#phObservationValue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#plantMeasurementService -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#plantMeasurementService">
+        <rdf:type rdf:resource="&ontoplant-measures;MeasurementService"/>
+        <DUL:hasConstituent rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#orpMeasurementService"/>
+        <DUL:hasConstituent rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#phMeasurementService"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#sampleObservation -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#sampleObservation">
+        <rdf:type rdf:resource="&ssn;Observation"/>
+        <DUL:hasConstituent rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#orpObservation"/>
+        <DUL:hasConstituent rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#phObservation"/>
+        <ontoplant-measures:sample rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterSample"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWater -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWater">
+        <rdf:type rdf:resource="&ssn;FeatureOfInterest"/>
+        <ssn:hasProperty rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterORP"/>
+        <ssn:hasProperty rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterPH"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterCollectionPoint -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterCollectionPoint">
+        <rdf:type rdf:resource="&ontoplant-measures;CollectionPoint"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterORP -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterORP">
+        <rdf:type rdf:resource="&ssn;Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterPH -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterPH">
+        <rdf:type rdf:resource="&ssn;Property"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterSample -->
+
+    <owl:NamedIndividual rdf:about="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterSample">
+        <ontoplant-measures:sampleOf rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWater"/>
+        <ontoplant-measures:collectedAt rdf:resource="http://www.utvalamb.enea.bologna.it/ontoplant-measures-lab-sample#tankWaterCollectionPoint"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
