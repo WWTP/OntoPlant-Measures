@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
-    <uri id="Imports Wizard Entry" name="http://www.utvalamb.enea.bologna.it/ontoplant-measures" uri="OntoPlant-Measures.owl"/>
-    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1395009316176" name="http://www.utvalamb.enea.bologna.it/ontolplant-measures" uri="OntoPlant-Measures.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1395009316176" name="duplicate:http://www.utvalamb.enea.bologna.it/ontolplant-measures-example" uri="OntoPlant-Measures-Lab-Sample.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1395009316176" name="duplicate:http://www.utvalamb.enea.bologna.it/ontolplant-measures-example" uri="OntoPlant-Measures-Sensor-NoSample.owl"/>
-    </group>
-</catalog>
